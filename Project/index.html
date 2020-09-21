@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/03f65086b9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <span class="inputlocation">
+            <h6>
+        <form class="inputBars">
+            <input type="search" 
+            placeholder="Enter your location"
+            id = "searchInput" 
+            autofocus="on" autocomplete="off" 
+            class="shadow-sm" /> 
+            <input type="submit"
+            id = "inputButton" 
+            value="search city" 
+            class="btn btn-dark shadow-sm" />
+        </form>
+        </h6>
+        </span>
+        <span class="submitlocations">
+            <h4>
+         <input type="submit" value="use current" id="currentLocation"
+         class="btn btn-dark shadow-sm" ;} />
+        </h4>
+    </span>
+</div>
+        <div class="currenticons">
+            <H1>
+                  <img id="sun" src="http://openweathermap.org/img/wn/01d.png">
+                  <div class="high-and-low">
+            <span class ="tempNow-high" id="tempNow-High">84</span>/<span class =
+            "tempNow-low" id="tempNow-Low">72</span>°F
+            </div>
+            </H1>
+        </div>
+            <h4>
+                <div class="thislocation"> 
+                    <span class="hereNow"> N </span>
+                    <br/>
+                <span class = "statusNow">Cloudy</span>
+                <div class="dateStamp">
+                    <em>Thursday 1:06 PM </em>
+                </div>
+                </div>
+            </h4>
+        </span>
+        <br />
+    </div>
+    <h5 class="celsius-farenheit">
+    <P>
+        <a href="" class="celsius">Celsius</a> / 
+        <a href="" class="farenheit">Farenheit</a> 
+    </P> 
+</h5>
+        <div class="currentspecifics">
+       <ul>
+           <li class= "humidity">
+    Humidity: 70%
+    </li> 
+<li class="windSpeed">
+    Wind: 5 mph
+</li>
+</ul>
+    </div>
+<div class="row"></div>
+<div class="friday">
+    <div class="col-3">
+    <h4> Friday <br />
+        <img id="fridaySun" src="http://openweathermap.org/img/wn/01d.png">
+<br />
+<small>86°/72°F</small>
+    </h4>
+</div>
+</div>
+    <span class="fridayrain"> 
+       <em>Precipitation: 20% </em>
+    </span>
+
+    <div class="row row-cols-4">
+        <div class="col-">
+<div class="saturday">
+    <h4> Saturday <br />
+        <img id="saturdaySun" src="http://openweathermap.org/img/wn/01d.png">
+
+        <br />
+       <small> 79°/63°F </small>
+    </h4>
+    <span class="saturdayrain"> 
+        <em>Precipitation: 90% </em>
+     </span>
+</div>
+</div>
+    <div class="col-">
+        <div class="sunday">
+            <h4> Sunday <br />
+                <img id="sundaySun" src="http://openweathermap.org/img/wn/01d.png">
+
+            <br />
+            <small> 77°/55°F</small>
+        </h4>
+            <span class="sundayrain">
+                <em>Precipitation: 10%</em>
+            </span>
+        </div>
+        </div>
+        <div class="col-">
+            <div class="monday">
+                <h4>Monday <br />
+                    <img id="mondaySun" src="http://openweathermap.org/img/wn/01d.png">
+           <span class="mondayTemp"><small> 77°/59°F</small></span> 
+        </h4>
+            <span class="mondayrain">
+                <em> Precipitation: 10%</em>
+            </span>
+            </div>
+            </div>
+            <div class="col-">
+                <div class="tuesday">
+                    <h4> Tuesday <br />
+                        <img id="tuesdaySun" src="http://openweathermap.org/img/wn/01d.png">
+                      <span class="tuesdayTemp">  <small> 73°/66°F</small></span></h4> 
+                <span class="tuesdayrain">
+                    <em> Precipitation: 20% </em>
+                </span>
+                </div>
+</div>
+<br />
+    <footer> This website was built by Amanda Capasso</footer>
+</div>
+<script src="src/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    margin: 35px;
+background: #322f3d;
+color: #a58b98;
+font-family: 'Nanum Gothic', sans-serif;
+font-size: 18px;
+text-transform: capitalize;}
+
+input, textarea { 
+     padding: 5px;
+    background: #322f3d;
+    color: #f2efd0;
+border: 1px solid #a58b98;}
+
+ul {list-style: none;}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    margin: 100px 0 0 550px;
+color: #f2efd0;
+font-family: 'Nova Mono', monospace;}
+
+h5 {display: block;
+position: relative; 
+bottom: 220px;};
+
+a { color: #943bd3;}
+
+a:visited {color: #943bd3;}
+
+.inputlocation h6{ 
+    position: relative;
+    top: 20px;
+    left: 990px;
+}
+
+
+.submitlocations h4 {
+    margin: 25px 0 0 1200px;
+}
+.currenticons {
+    position: relative;
+    top: -82px;
+    color: #a58b98;
+    width: 375px
+
+}
+
+
+.thislocation {
+    position: relative;
+    text-align: center;
+    bottom: 158px;
+    right: 380px;
+    color: #f2efd0;
+        font-family: 'Nova Mono', monospace;
+}
+
+.hereNow { font-size: 33px;}
+
+
+.tempnow {
+    margin-top: -75px;
+    font-size: 22px;
+}
+
+
+.currentspecifics {
+position: relative;
+top: -225px;
+left: -40px;
+color: #f2efd0;
+font-size: 17px;
+font-family: 'Nova Mono', monospace;}
+
+.friday
+{position: relative;
+    left: -10px;
+    top: -80px;
+    width: 375px;
+    font-size: 12pt;
+    transition: all 100ms ease-in-out;
+}
+
+.fridayrain, .saturdayrain, .sundayrain, 
+.mondayrain, .tuesdayrain {
+    color: #f2efd0;
+    font-family: 'Nova Mono', monospace;}
+
+.fridayrain {position: relative;
+    bottom: 150px;
+    left: 120px;
+
+}
+.saturdayrain, .sundayrain {
+position: relative;
+bottom: 70px;
+left: 120px;
+}
+
+.mondayrain, .tuesdayrain { 
+    position: relative;
+    bottom: 45px;
+    left: 120px;
+}
+
+.tuesdayTemp, .mondayTemp { position: relative;
+top: 45px;
+right: 60px;}
+
+
+.saturday {margin: 70px 0 0 18px;
+    height: 120px;
+    transition: all 100ms ease-in-out;}
+
+.sunday, .monday, .tuesday {
+    margin: 70px 30px 0 0;
+    height: 115px;
+    transition: all 100ms ease-in-out;}
+
+
+.saturday:hover, .sunday:hover, .monday:hover, 
+.tuesday:hover, .friday:hover  {background: #87556f}
