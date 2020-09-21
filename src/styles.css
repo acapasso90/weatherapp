@@ -25,9 +25,10 @@ h5 {display: block;
 position: relative; 
 bottom: 220px;};
 
+a:link {color: #943bd3;}
 a { color: #943bd3;}
+a:visited { color: #943bd3;}
 
-a:visited {color: #943bd3;}
 
 .inputlocation h6{ 
     position: relative;
