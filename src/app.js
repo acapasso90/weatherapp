@@ -48,10 +48,10 @@ function showWeather(response) {
   else if (iconStatus === "Rain", "Drizzle"){`${snow}.innerHTML = ${rain}`;}
 let humidity = (response.data.main.humidity);
 let currentHumidity = document.querySelector(".humidity");
-currentHumidity.innerHTML = `Humidity: ${humidity} %`;
+currentHumidity.innerHTML = `Humidity: ${humidity}%`;
 let windSpeed = (response.data.wind.speed);
 let currentWind = document.querySelector(".windSpeed");
-currentWind.innerHTML = `Wind: ${windSpeed} mph`
+currentWind.innerHTML = `Wind: ${windSpeed} MPH`
 document.querySelector(".hereNow").innerHTML=response.data.name;
 }
 
