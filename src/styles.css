@@ -6,6 +6,8 @@ font-family: 'Nanum Gothic', sans-serif;
 font-size: 18px;
 text-transform: capitalize;}
 
+a, a:hover, a:visited { color: #943bd3;}
+
 input, textarea { 
      padding: 5px;
     background: #322f3d;
@@ -13,6 +15,7 @@ input, textarea {
 border: 1px solid #a58b98;}
 
 ul {list-style: none;}
+
 
 footer {
     font-size: 16px;
@@ -25,55 +28,20 @@ h5 {display: block;
 position: relative; 
 bottom: 220px;};
 
-a:link {color: #943bd3;}
-a { color: #943bd3;}
-a:visited { color: #943bd3;}
-
-
-.inputlocation h6{ 
-    position: relative;
-    top: 20px;
-    left: 990px;
-}
-
-
-.submitlocations h4 {
-    margin: 25px 0 0 1200px;
-}
-.currenticons {
-    position: relative;
-    top: -82px;
-    color: #a58b98;
-    width: 375px
-
-}
-
-
-.thislocation {
-    position: relative;
-    text-align: center;
-    bottom: 158px;
-    right: 380px;
-    color: #f2efd0;
-        font-family: 'Nova Mono', monospace;
-}
-
-.hereNow { font-size: 33px;}
-
-
 .tempnow {
     margin-top: -75px;
     font-size: 22px;
 }
 
+.hereNow { font-size: 33px;}
 
 .currentspecifics {
-position: relative;
-top: -225px;
-left: -40px;
-color: #f2efd0;
-font-size: 17px;
-font-family: 'Nova Mono', monospace;}
+    position: relative;
+    top: -225px;
+    left: -40px;
+    color: #f2efd0;
+    font-size: 17px;
+    font-family: 'Nova Mono', monospace;}
 
 .friday
 {position: relative;
@@ -120,6 +88,34 @@ right: 60px;}
     height: 115px;
     transition: all 100ms ease-in-out;}
 
+    
+.inputlocation h6{ 
+    position: relative;
+    right: -990px;
+  }
+
+  .submitlocations h4 {
+    margin: 5px 0 0 1200px;
+}
+  
+
+.currenticons {
+    position: relative;
+    top: -82px;
+    color: #a58b98;
+    width: 375px
+
+}
+
+.thislocation {
+    position: relative;
+    text-align: center;
+    bottom: 158px;
+    right: 380px;
+    color: #f2efd0;
+        font-family: 'Nova Mono', monospace;
+}
+
 
 .saturday:hover, .sunday:hover, .monday:hover, 
-.tuesday:hover, .friday:hover  {background: #87556f}
+.tuesday:hover, .friday:hover  {background: #87556f}s
