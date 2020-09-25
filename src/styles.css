@@ -2,7 +2,7 @@ body {
     margin: 35px;
 background: #322f3d;
 color: #a58b98;
-font-family: 'Nanum Gothic', sans-serif;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;}
 
@@ -22,7 +22,7 @@ footer {
     text-align: center;
     margin: 100px 0 0 550px;
 color: #f2efd0;
-font-family: 'Nova Mono', monospace;}
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 h5 {display: block;
 position: relative; 
@@ -41,7 +41,7 @@ bottom: 220px;};
     left: -40px;
     color: #f2efd0;
     font-size: 17px;
-    font-family: 'Nova Mono', monospace;}
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
 {position: relative;
@@ -55,7 +55,7 @@ bottom: 220px;};
 .fridayrain, .saturdayrain, .sundayrain, 
 .mondayrain, .tuesdayrain {
     color: #f2efd0;
-    font-family: 'Nova Mono', monospace;}
+    font-family: 'Nova Mono', monospace}
 
 .fridayrain {position: relative;
     bottom: 150px;
@@ -91,13 +91,15 @@ right: 60px;}
     
 .inputlocation h6{ 
     position: relative;
-    right: -990px;
+    right: -980px;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .submitlocations h4 {
-    margin: 5px 0 0 1200px;
+    margin: 5px 0 0 1203px;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
 }
-  
 
 .currenticons {
     position: relative;
@@ -118,4 +120,4 @@ right: 60px;}
 
 
 .saturday:hover, .sunday:hover, .monday:hover, 
-.tuesday:hover, .friday:hover  {background: #87556f}s
+.tuesday:hover, .friday:hover  {background: #87556f}

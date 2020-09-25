@@ -26,7 +26,6 @@ let revertLink = document.querySelector(".farenheit");
 revertLink.addEventListener("click", revertTemperature)
 
 function showWeather(response) {
-  console.log(response)
   let temperature = Math.round(response.data.main.temp);
   let temperatureLow = Math.round(response.data.main.temp_min);
   let temperatureInput = document.querySelector(".high-and-low");
