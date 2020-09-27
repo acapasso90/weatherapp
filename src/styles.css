@@ -22,7 +22,7 @@ footer {
     text-align: center;
     margin: 100px 0 0 550px;
 color: #f2efd0;
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
 h5 {display: block;
 position: relative; 
@@ -46,7 +46,7 @@ bottom: 220px;};
 .friday
 {position: relative;
     left: -10px;
-    top: -80px;
+    top: -150px;
     width: 375px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
@@ -58,7 +58,7 @@ bottom: 220px;};
     font-family: 'Nova Mono', monospace}
 
 .fridayrain {position: relative;
-    bottom: 150px;
+    bottom: 230px;
     left: 120px;
 
 }
@@ -70,7 +70,7 @@ left: 120px;
 
 .mondayrain, .tuesdayrain { 
     position: relative;
-    bottom: 45px;
+    bottom: 50px;
     left: 120px;
 }
 
@@ -79,12 +79,12 @@ top: 45px;
 right: 60px;}
 
 
-.saturday {margin: 70px 0 0 18px;
+.saturday {margin: 0 0 120px 18px;
     height: 120px;
     transition: all 100ms ease-in-out;}
 
 .sunday, .monday, .tuesday {
-    margin: 70px 30px 0 0;
+    margin-right: 30px;
     height: 115px;
     transition: all 100ms ease-in-out;}
 
@@ -113,7 +113,7 @@ right: 60px;}
     position: relative;
     text-align: center;
     bottom: 158px;
-    right: 380px;
+    right: 350px;
     color: #f2efd0;
         font-family: 'Nova Mono', monospace;
 }
