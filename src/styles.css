@@ -4,7 +4,8 @@ background: #322f3d;
 color: #a58b98;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
-text-transform: capitalize;}
+text-transform: capitalize;
+}
 
 a, a:hover, a:visited { color: #943bd3;}
 
@@ -20,7 +21,7 @@ ul {list-style: none;}
 footer {
     font-size: 16px;
     text-align: center;
-    margin: 100px 0 0 550px;
+    margin: -20px 0 0 550px;
 color: #f2efd0;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
@@ -44,12 +45,16 @@ bottom: 220px;};
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
-{position: relative;
-    left: -10px;
-    top: -150px;
-    width: 375px;
+{margin: -175px 0 50px -10px;
+    width: 370px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
+}
+
+
+.fridayrain {position: relative;
+left: 125px;
+bottom: 120px;
 }
 
 .fridayrain, .saturdayrain, .sundayrain, 
@@ -57,11 +62,6 @@ bottom: 220px;};
     color: #f2efd0;
     font-family: 'Nova Mono', monospace}
 
-.fridayrain {position: relative;
-    bottom: 230px;
-    left: 120px;
-
-}
 .saturdayrain, .sundayrain {
 position: relative;
 bottom: 70px;
@@ -79,24 +79,24 @@ top: 45px;
 right: 60px;}
 
 
-.saturday {margin: 0 0 120px 18px;
+.saturday {margin: 10px 0 120px 18px;
     height: 120px;
     transition: all 100ms ease-in-out;}
 
 .sunday, .monday, .tuesday {
-    margin-right: 30px;
+    margin: 10px 0 0 30px;
     height: 115px;
     transition: all 100ms ease-in-out;}
 
     
 .inputlocation h6{ 
     position: relative;
-    right: -980px;
+    right: -880px;
     font-family: 'Courier New', Courier, monospace;
   }
 
   .submitlocations h4 {
-    margin: 5px 0 0 1203px;
+    margin: 5px 0 0 1103px;
     font-size: 13px;
     font-family: 'Courier New', Courier, monospace;
 }
