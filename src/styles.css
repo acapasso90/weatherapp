@@ -37,23 +37,22 @@ bottom: 220px;};
 .hereNow { font-size: 33px;}
 
 .currentspecifics {
-    position: relative;
-    top: -225px;
-    left: -40px;
+    margin: -225px 0 0 -40px;
     color: #f2efd0;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
-{margin: -175px 0 50px -10px;
+{margin: 50px 0 50px -10px;
     width: 370px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
 }
 
 
-.fridayrain {position: relative;
-left: 125px;
+.fridayrain {
+ position: relative;
+ left: 125px;
 bottom: 120px;
 }
 
@@ -109,13 +108,12 @@ right: 60px;}
 
 }
 
-.thislocation {
-    position: relative;
+.thislocation {    position: relative;
     text-align: center;
     bottom: 158px;
-    right: 350px;
+    right: 320px;
     color: #f2efd0;
-        font-family: 'Nova Mono', monospace;
+    font-family: 'Nova Mono', monospace;
 }
 
 
