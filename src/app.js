@@ -30,16 +30,12 @@ function showWeather(response) {
   let temperatureLow = Math.round(response.data.main.temp_min);
   let temperatureInput = document.querySelector(".high-and-low");
   temperatureInput.innerHTML = `${temperature}°/${temperatureLow}°F`;
-  let icon = document.querySelector(".fa-cloud")
+  let icon = document.querySelector("#sun")
   let status = (response.data.weather[0].description);
   let currentStatus = document.querySelector(".statusNow");
   currentStatus.innerHTML = `${status}`;
-  let iconStatus = (response.data.weather[0].main);
-  if (iconStatus === "Thunderstorm"){document.getElementById("sun").src="https://openweathermap.org/img/wn/11d.png";}
-  else if (iconStatus === "Clouds"){document.getElementById("sun").src="https://openweathermap.org/img/wn/03d.png";}
-  else if (iconStatus === "Clear"){document.getElementById("sun").src="https://openweathermap.org/img/wn/01d.png";}
-  else if (iconStatus === "Snow"){document.getElementById("sun").src="https://openweathermap.org/img/wn/13d.png";}
-  else {document.getElementById("sun").src="https://openweathermap.org/img/wn/09d.png";}
+  icon.setAttribute("alt", response.data.weather[0].description);
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 let humidity = (response.data.main.humidity);
 let currentHumidity = document.querySelector(".humidity");
 currentHumidity.innerHTML = `Humidity: ${humidity}%`;
