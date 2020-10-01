@@ -119,3 +119,15 @@ right: 60px;}
 
 .saturday:hover, .sunday:hover, .monday:hover, 
 .tuesday:hover, .friday:hover  {background: #87556f}
+
+.farenheit:hover {text-decoration: none;
+    cursor: default;
+    color: #f2efd0;}
+
+    .farenheit {color: #f2efd0;
+        cursor: default;
+    text-decoration: none;}
+
+    .farenheit:visited {color: #f2efd0;
+        cursor: default;
+    text-decoration: none;}

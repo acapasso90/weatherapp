@@ -1,35 +1,34 @@
 function convertTemperature(event){
   event.preventDefault();
-  let temperatureHigh = 84;
-  let temperatureLow = 72;
-  let celsiusTemperatureHigh = Math.round((temperatureHigh - 32)* 5/9);
-  let celsiusTemperatureLow = Math.round((temperatureLow - 32)* 5/9);
- 
+  let celsiusTemperatureHigh = Math.round((farenheitTemperature - 32)* 5/9);
+  let celsiusTemperatureLow = Math.round((farenheitLowTemperature - 32)* 5/9);
   let temperature = document.querySelector(".high-and-low");
-  temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
-}
+   temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
+   convertLink.classList.add("farenheit");
+   revertLink.classList.remove("farenheit");}
 let convertLink = document.querySelector(".celsius");
 convertLink.addEventListener("click", convertTemperature);
 
 
 function revertTemperature(event){
   event.preventDefault();
-  let temperatureHigh = 29;
-  let temperatureLow = 22;
-  let farenheitTemperatureHigh = Math.round((temperatureHigh * 9) / 5 + 32);
-  let farenheitTemperatureLow = Math.round((temperatureLow * 9) / 5 + 32);
+  let farenheitTemperatureHigh = Math.round(farenheitTemperature);
+  let farenheitTemperatureLow = Math.round(farenheitLowTemperature);
   let temperature = document.querySelector(".high-and-low");
   temperature.innerHTML = `${farenheitTemperatureHigh}/${farenheitTemperatureLow}°F`;
-}
+revertLink.classList.add("farenheit");
+convertLink.classList.remove("farenheit");}
 
 let revertLink = document.querySelector(".farenheit");
 revertLink.addEventListener("click", revertTemperature)
 
 function showWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureLow = Math.round(response.data.main.temp_min);
+  farenheitTemperature = response.data.main.temp;
+  farenheitLowTemperature = response.data.main.temp_min;
+  let temperature = Math.round(farenheitTemperature);
+  let temperatureLow = Math.round(farenheitLowTemperature);
   let temperatureInput = document.querySelector(".high-and-low");
-  temperatureInput.innerHTML = `${temperature}°/${temperatureLow}°F`;
+  temperatureInput.innerHTML = `${temperature}/${temperatureLow}°F`;
   let icon = document.querySelector("#sun")
   let status = (response.data.weather[0].description);
   let currentStatus = document.querySelector(".statusNow");
@@ -43,6 +42,7 @@ let windSpeed = (response.data.wind.speed);
 let currentWind = document.querySelector(".windSpeed");
 currentWind.innerHTML = `Wind: ${windSpeed} MPH`
 document.querySelector(".hereNow").innerHTML=response.data.name;
+farenheitTemperature = response.data.main.temp
 }
 
 function searchCity(city) {
@@ -91,5 +91,8 @@ currentButton.addEventListener("click", showLocation);
   let dateStamp = document.querySelector(".dateStamp");
   dateStamp.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
 
+  let farenheitTemperature = null;
+  let farenheitLowTemperature = null;
   
 searchCity("New York");
+
