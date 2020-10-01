@@ -5,9 +5,14 @@ color: #a58b98;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
+max-width: 1400px;}
+
+
+a, a:hover, a:visited { color: #943bd3;
+    text-decoration: none;
 }
 
-a, a:hover, a:visited { color: #943bd3;}
+a {text-decoration: underline;}
 
 input, textarea { 
      padding: 5px;
@@ -25,9 +30,10 @@ footer {
 color: #f2efd0;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
-h5 {display: block;
-position: relative; 
-bottom: 220px;};
+h5 {
+    display: block;
+    position: relative; 
+    bottom: 220px;};
 
 .tempnow {
     margin-top: -75px;
@@ -51,31 +57,31 @@ bottom: 220px;};
 
 
 .fridayrain {
- position: relative;
- left: 125px;
-bottom: 120px;
-}
-
-.fridayrain, .saturdayrain, .sundayrain, 
-.mondayrain, .tuesdayrain {
-    color: #f2efd0;
-    font-family: 'Nova Mono', monospace}
-
-.saturdayrain, .sundayrain {
-position: relative;
-bottom: 70px;
-left: 120px;
-}
-
-.mondayrain, .tuesdayrain { 
     position: relative;
-    bottom: 50px;
+    bottom: 120px;
     left: 120px;
-}
-
-.tuesdayTemp, .mondayTemp { position: relative;
-top: 45px;
-right: 60px;}
+   }
+   
+   .fridayrain, .saturdayrain, .sundayrain, 
+   .mondayrain, .tuesdayrain {
+       color: #f2efd0;
+       font-family: 'Nova Mono', monospace}
+   
+   .saturdayrain, .sundayrain {
+   position: relative;
+   bottom: 70px;
+   left: 120px;
+   }
+   
+   .mondayrain, .tuesdayrain { 
+       position: relative;
+       bottom: 50px;
+       left: 120px;
+   }
+   
+   .tuesdayTemp, .mondayTemp { position: relative;
+   top: 45px;
+   right: 60px;}
 
 
 .saturday {margin: 10px 0 120px 18px;
@@ -89,13 +95,14 @@ right: 60px;}
 
     
 .inputlocation h6{ 
-    position: relative;
-    right: -880px;
+    padding-left: 890px;
+    width: 100%;
+    white-space: nowrap;
     font-family: 'Courier New', Courier, monospace;
   }
 
   .submitlocations h4 {
-    margin: 5px 0 0 1103px;
+    margin: 5px 0 0 1113px;
     font-size: 13px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -110,9 +117,9 @@ right: 60px;}
 
 .thislocation {    position: relative;
     text-align: center;
-    bottom: 158px;
-    right: 320px;
-    color: #f2efd0;
+    bottom: 203px;
+    right: 300px;
+    color: #c9a9b9;
     font-family: 'Nova Mono', monospace;
 }
 
