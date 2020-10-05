@@ -45,20 +45,53 @@ document.querySelector(".hereNow").innerHTML=response.data.name;
 farenheitTemperature = response.data.main.temp
 }
 
-function convertHours(timestamp){ let now = new Date();
+function formatDate() {
+  let now = new Date();
   let date = now.getDate();
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  let day = days [now.getDay()];
-  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  let month = months [now.getMonth()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[now.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+
+  return `${day}, ${month} ${date} ${convertHours(now)}`;
+}
+
+function convertHours(timestamp) {
+  let now = new Date(timestamp);
   let hours = now.getHours();
-  if (hours > 12){hours -= 12;}
-  else if (hours === 0){hours === 12;}
-  else if (hours < 10){hours = `0${hours}`;}
+  if (hours > 12) {
+    hours -= 12;
+  } else if (hours === 0) {
+    hours === 12;
+  } else if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = now.getMinutes();
-  if (minutes < 10){minutes = `0${minutes}`;}
-  let dateStamp = document.querySelector(".dateStamp");
-  dateStamp.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   return `${hours}:${minutes}`;
 }
@@ -77,7 +110,7 @@ function displayForcast(response){
 let forcast = response.data.list[0];
 tomorrowElement.innerHTML = `
 <div class="col-3">
-<h4> ${convertHours(forcast.dt)} <br />
+<h4> ${convertHours(forcast.dt*1000)} <br />
     <img id="fridaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
 <br />
 ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
@@ -88,7 +121,7 @@ tomorrowDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 forcast = response.data.list[1];
  saturdayElement.innerHTML =
   `<div class="col-3">
-  <h4> ${convertHours(forcast.dt)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
   ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
@@ -98,7 +131,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[2];
  sundayElement.innerHTML =
   `<div class="col-">
-  <h4> ${convertHours(forcast.dt)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
   ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
@@ -108,7 +141,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[3];
  mondayElement.innerHTML =
   `<div class="col-">
-  <h4> ${convertHours(forcast.dt)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
   ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
@@ -118,7 +151,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[4];
  tuesdayElement.innerHTML =
   `<div class="col-">
-  <h4> ${convertHours(forcast.dt)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
   ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
@@ -170,5 +203,6 @@ currentButton.addEventListener("click", showLocation);
   let farenheitTemperature = null;
   let farenheitLowTemperature = null;
   
+let dateStamp = document.querySelector(".dateStamp");
+dateStamp.innerHTML = formatDate();
 searchCity("New York");
-
