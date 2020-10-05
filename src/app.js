@@ -29,7 +29,7 @@ function showWeather(response) {
   let temperatureLow = Math.round(farenheitLowTemperature);
   let temperatureInput = document.querySelector(".high-and-low");
   temperatureInput.innerHTML = `${temperature}/${temperatureLow}°F`;
-  let icon = document.querySelector("#sun")
+  let icon = document.querySelector("#sun");
   let status = (response.data.weather[0].description);
   let currentStatus = document.querySelector(".statusNow");
   currentStatus.innerHTML = `${status}`;
@@ -45,38 +45,7 @@ document.querySelector(".hereNow").innerHTML=response.data.name;
 farenheitTemperature = response.data.main.temp
 }
 
-function searchCity(city) {
-  let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
-let units = "imperial";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-axios.get(apiUrl).then(showWeather);
-}
-
-function enterCity(event){
-  event.preventDefault();
-  let city = document.querySelector("#searchInput").value;
-  searchCity(city); 
-} 
-let citySearch = document.querySelector(".inputBars");
-citySearch.addEventListener("submit", enterCity);
-
-function searchLocation(position){
-  let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
-  let units = "imperial";
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showWeather)
-}
-function showLocation(event){
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
- }
-
-let currentButton = document.querySelector("#currentLocation");
-currentButton.addEventListener("click", showLocation);
-
-  let now = new Date();
+function convertHours(timestamp){ let now = new Date();
   let date = now.getDate();
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   let day = days [now.getDay()];
@@ -91,6 +60,113 @@ currentButton.addEventListener("click", showLocation);
   let dateStamp = document.querySelector(".dateStamp");
   dateStamp.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
 
+  return `${hours}:${minutes}`;
+}
+
+function displayForcast(response){
+  let tomorrowElement = document.getElementById("tomorrowForcast");
+  let tomorrowDescription = document.querySelector(".fridayrain");
+ let saturdayElement = document.getElementById("saturdayForcast");
+ let saturdayDescription = document.querySelector(".saturdayrain");
+ let sundayElement = document.getElementById("sundayForcast");
+ let sundayDescription = document.querySelector(".sundayrain");
+ let mondayElement = document.getElementById("mondayForcast");
+ let mondayDescription = document.querySelector(".mondayrain");
+ let tuesdayElement = document.getElementById("tuesdayForcast");
+ let tuesdayDescription = document.querySelector(".tuesdayrain");
+let forcast = response.data.list[0];
+tomorrowElement.innerHTML = `
+<div class="col-3">
+<h4> ${convertHours(forcast.dt)} <br />
+    <img id="fridaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
+<br />
+${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+</h4>
+</div>`;
+tomorrowDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
+
+forcast = response.data.list[1];
+ saturdayElement.innerHTML =
+  `<div class="col-3">
+  <h4> ${convertHours(forcast.dt)} <br />
+  <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <br />
+  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  </h4>` 
+  saturdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
+
+  forcast = response.data.list[2];
+ sundayElement.innerHTML =
+  `<div class="col-">
+  <h4> ${convertHours(forcast.dt)} <br />
+  <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <br />
+  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  </h4>` 
+  sundayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
+
+  forcast = response.data.list[3];
+ mondayElement.innerHTML =
+  `<div class="col-">
+  <h4> ${convertHours(forcast.dt)} <br />
+  <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <br />
+  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  </h4>` 
+  mondayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
+
+  forcast = response.data.list[4];
+ tuesdayElement.innerHTML =
+  `<div class="col-">
+  <h4> ${convertHours(forcast.dt)} <br />
+  <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <br />
+  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  </h4>` 
+  tuesdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
+}
+
+
+function searchCity(city) {
+  let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+let units = "imperial";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(showWeather);
+
+extendedApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(extendedApiUrl).then(displayForcast);
+}
+
+function enterCity(event){
+  event.preventDefault();
+  let city = document.querySelector("#searchInput").value;
+  searchCity(city); 
+} 
+let citySearch = document.querySelector(".inputBars");
+citySearch.addEventListener("submit", enterCity);
+
+
+  
+function searchLocation(position){
+  let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+  let units = "imperial";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showWeather);
+
+  extendedApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(extendedApiUrl).then(displayForcast);
+}
+function showLocation(event){
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+ }
+
+let currentButton = document.querySelector("#currentLocation");
+currentButton.addEventListener("click", showLocation);
+
+ 
   let farenheitTemperature = null;
   let farenheitLowTemperature = null;
   
