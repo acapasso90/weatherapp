@@ -49,16 +49,15 @@ h5 {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
-{margin: 50px 0 50px -10px;
-    width: 370px;
+{margin: 50px 0 50px 8px;
+    width: 335px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
 }
 
-
 .fridayrain {
     position: relative;
-    bottom: 120px;
+    bottom: 150px;
     left: 120px;
    }
    
@@ -67,16 +66,21 @@ h5 {
        color: #f2efd0;
        font-family: 'Nova Mono', monospace}
    
-   .saturdayrain, .sundayrain {
+   .saturdayrain {
    position: relative;
-   bottom: 90px;
-   left: 120px;
+   bottom: 170px;
+   left: 140px;
+   }
+   .sundayrain{
+    position: relative;
+    bottom: 90px;
+    left: 160px;
    }
    
    .mondayrain, .tuesdayrain { 
        position: relative;
-       bottom: 50px;
-       left: 120px;
+       bottom: 100px;
+       left: 180px;
    }
    
    .tuesdayTemp, .mondayTemp { position: relative;
@@ -84,10 +88,10 @@ h5 {
    right: 60px;}
 
 
-.saturday {margin: 10px 0 120px 18px;
+.saturday {margin: 10px 0 80px 18px;
     transition: all 100ms ease-in-out;}
 
-.sunday, .monday, .tuesday {
+.sunday, .tuesday, .monday {
     margin: 10px 0 0 30px;
     transition: all 100ms ease-in-out;}
 

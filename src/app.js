@@ -130,7 +130,7 @@ forcast = response.data.list[1];
 
   forcast = response.data.list[2];
  sundayElement.innerHTML =
-  `<div class="col-">
+  `<div class="col-3">
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
@@ -140,7 +140,7 @@ forcast = response.data.list[1];
 
   forcast = response.data.list[3];
  mondayElement.innerHTML =
-  `<div class="col-">
+  `<div class="col-3">
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
@@ -150,7 +150,7 @@ forcast = response.data.list[1];
 
   forcast = response.data.list[4];
  tuesdayElement.innerHTML =
-  `<div class="col-">
+  `<div class="col-3">
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
