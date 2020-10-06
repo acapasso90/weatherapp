@@ -5,7 +5,7 @@ color: #a58b98;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
-max-width: 1200px;}
+max-width: 1250px;}
 
 
 a, a:hover, a:visited { color: #943bd3;
@@ -56,7 +56,7 @@ h5 {
 .fridayrain {
     position: relative;
     bottom: 150px;
-    left: 120px;
+    left: 110px;
    }
    
    .fridayrain, .saturdayrain, .sundayrain, 
@@ -66,40 +66,29 @@ h5 {
    
    .saturdayrain {
    position: relative;
-   bottom: 170px;
-   left: 140px;
+   bottom: 100px;
+   left: 120px;
    }
    .sundayrain{
     position: relative;
-    bottom: 90px;
-    left: 160px;
+    bottom: 120px;
+    left: 140px;
    }
    
    .mondayrain, .tuesdayrain { 
        position: relative;
-       bottom: 100px;
-       left: 180px;
+       bottom: 155px;
+       left: 140px;
    }
    
    .tuesdayTemp, .mondayTemp { position: relative;
    top: 45px;
    right: 60px;}
+.inputBars {padding: 30px 0 0 810px; 
+width: 100%;
+white-space: nowrap;
+font-family: 'Courier New', Courier, monospace;}
 
-
-.saturday {margin: 10px 0 80px 18px;
-    transition: all 100ms ease-in-out;}
-
-.sunday, .tuesday, .monday {
-    margin: 10px 0 0 30px;
-    transition: all 100ms ease-in-out;}
-
-    
-.inputlocation h6{ 
-    padding: 30px 0 0 810px; 
-    width: 100%;
-    white-space: nowrap;
-    font-family: 'Courier New', Courier, monospace;
-  }
 
   .submitlocations h4 {
     margin: 5px 0 0 1033px;
@@ -115,13 +104,27 @@ h5 {
 
 }
 
-.thislocation {    position: relative;
-    text-align: center;
-    bottom: 243px;
-    right: 150px;
+.thislocation {text-align: center;
+    position: relative;
+right: 200px;
+bottom: 190px;
     color: #c9a9b9;
-    font-family: 'Nova Mono', monospace;
-}
+    font-family: 'Nova Mono', monospace;}
+
+.monday, .tuesday {position: relative;
+bottom: 15px;
+margin: 0 0 50px 18px;
+    transition: all 100ms ease-in-out;}
+
+.sunday {position: relative;
+bottom: 20px;
+margin: 10px 0 0 30px;
+transition: all 100ms ease-in-out;}
+
+.saturday {margin: 10px 0 0 18px;
+    transition: all 100ms ease-in-out;
+    position: relative;
+top: 5px;}
 
 
 .saturday:hover, .sunday:hover, .monday:hover, 
@@ -138,3 +141,6 @@ h5 {
     .farenheit:visited {color: #f2efd0;
         cursor: default;
     text-decoration: none;}
+    #fridaySun, #saturdaySun, #sundaySun, #mondaySun, #tuesdaySun {position: relative;
+        right: 10px;}
+    
