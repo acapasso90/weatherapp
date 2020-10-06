@@ -34,6 +34,9 @@ h5 {
     display: block;
     position: relative; 
     bottom: 190px;};
+
+.border {border: 5px solid #FFFFFF  !important;}
+
 .tempnow {
     font-size: 22px;
 }

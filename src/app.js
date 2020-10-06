@@ -5,6 +5,14 @@ function convertTemperature(event){
   let metricWind = Math.round(windSpeed * 1.60934);
   let windNow = document.querySelector(".windSpeed");
   windNow.innerHTML = `Wind: ${metricWind} KPH`;
+  let forcastMax = document.querySelectorAll(".temperatureHigh");
+forcastMax.forEach(function(forcast) {  let currentTemp = forcast.innerHTML; 
+  forcast.innerHTML = Math.round((currentTemp - 32)* 5/9);
+});
+let forcastMin = document.querySelectorAll(".temperatureLow");
+forcastMin.forEach(function(forcastMin) {  let currentTemp = forcastMin.innerHTML; 
+  forcastMin.innerHTML = Math.round((currentTemp - 32)* 5/9);
+});
   let temperature = document.querySelector(".high-and-low");
    temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
       convertLink.classList.add("farenheit");
@@ -20,10 +28,17 @@ function revertTemperature(event){
   let temperature = document.querySelector(".high-and-low");
   let revertWind = windSpeed;
   let windRevert = document.querySelector(".windSpeed");
+  let forcastMax = document.querySelectorAll(".temperatureHigh");
+  forcastMax.forEach(function(forcast) {  let currentTemp = forcast.innerHTML; 
+    forcast.innerHTML = Math.round(currentTemp * 9/5) + 32});
+    let forcastMin = document.querySelectorAll(".temperatureLow");
+forcastMin.forEach(function(forcastMin) {  let currentTemp = forcastMin.innerHTML; 
+  forcastMin.innerHTML = Math.round(currentTemp * 9/5) + 32});
   windRevert.innerHTML = `Wind: ${revertWind} MPH`;
   temperature.innerHTML = `${farenheitTemperatureHigh}/${farenheitTemperatureLow}°F`;
 revertLink.classList.add("farenheit");
-convertLink.classList.remove("farenheit");}
+convertLink.classList.remove("farenheit");
+}
 
 let revertLink = document.querySelector(".farenheit");
 revertLink.addEventListener("click", revertTemperature)
@@ -104,6 +119,7 @@ function convertHours(timestamp) {
 
 function displayForcast(response){
   let forcast = response.data.list[0];
+  let forcastLow = Math.round(forcast.main.temp.min);
   let highTemp = Math.round(forcast.main.temp.max);
   let lowTemp = Math.round(forcast.main.temp.min);
   let tomorrowElement = document.getElementById("tomorrowForcast");
@@ -121,7 +137,7 @@ tomorrowElement.innerHTML = `
 <h4>&nbsp;&nbsp;${convertHours(forcast.dt*1000)} <br />
     <img id="fridaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
 <div class="highLow">
-<span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}°</span>
+<span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
 </h4>
 </div>
 </div>`;
@@ -134,7 +150,7 @@ forcast = response.data.list[1];
   <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
-  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}°</span>
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
   saturdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
@@ -145,7 +161,7 @@ forcast = response.data.list[1];
   <h4>&nbsp;&nbsp; ${convertHours(forcast.dt*1000)} <br />
   <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
-  <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}°</span>
+  <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
  </h4>
   </div>` 
   sundayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
@@ -157,7 +173,7 @@ forcast = response.data.list[1];
   <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
-  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}°</span>
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
   mondayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
@@ -168,7 +184,7 @@ forcast = response.data.list[1];
   <h4>&nbsp;&nbsp; ${convertHours(forcast.dt*1000)} <br />
   <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow"><span class="temperatureHigh">
-  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}°</span>
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
   tuesdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
