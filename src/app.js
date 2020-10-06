@@ -4,7 +4,7 @@ function convertTemperature(event){
   let celsiusTemperatureLow = Math.round((farenheitLowTemperature - 32)* 5/9);
   let temperature = document.querySelector(".high-and-low");
    temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
-   convertLink.classList.add("farenheit");
+      convertLink.classList.add("farenheit");
    revertLink.classList.remove("farenheit");}
 let convertLink = document.querySelector(".celsius");
 convertLink.addEventListener("click", convertTemperature);
@@ -97,6 +97,9 @@ function convertHours(timestamp) {
 }
 
 function displayForcast(response){
+  let forcast = response.data.list[0];
+  let highTemp = Math.round(forcast.main.temp.max);
+  let lowTemp = Math.round(forcast.main.temp.min);
   let tomorrowElement = document.getElementById("tomorrowForcast");
   let tomorrowDescription = document.querySelector(".fridayrain");
  let saturdayElement = document.getElementById("saturdayForcast");
@@ -107,13 +110,13 @@ function displayForcast(response){
  let mondayDescription = document.querySelector(".mondayrain");
  let tuesdayElement = document.getElementById("tuesdayForcast");
  let tuesdayDescription = document.querySelector(".tuesdayrain");
-let forcast = response.data.list[0];
 tomorrowElement.innerHTML = `
 <div class="col-3">
 <h4> ${convertHours(forcast.dt*1000)} <br />
     <img id="fridaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
-<br />
-${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+<br /> 
+<span class="temperatureHigh">
+${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>
 </h4>
 </div>`;
 tomorrowDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
@@ -124,7 +127,8 @@ forcast = response.data.list[1];
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
-  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  <span class="temperatureHigh">
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>
   </h4>` 
   saturdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 
@@ -134,7 +138,7 @@ forcast = response.data.list[1];
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
-  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>
   </h4>` 
   sundayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 
@@ -144,7 +148,8 @@ forcast = response.data.list[1];
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
-  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  <span class="temperatureHigh">
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>
   </h4>` 
   mondayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 
@@ -154,7 +159,8 @@ forcast = response.data.list[1];
   <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <br />
-  ${Math.round(forcast.main.temp_max)}°/${Math.round(forcast.main.temp_min)}
+  <span class="temperatureHigh">
+  ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>
   </h4>` 
   tuesdayDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 }

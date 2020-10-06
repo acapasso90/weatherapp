@@ -1,11 +1,11 @@
 body {
-    margin: 35px;
+    margin-left: 25px;
 background: #322f3d;
 color: #a58b98;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
-max-width: 1400px;}
+max-width: 1200px;}
 
 
 a, a:hover, a:visited { color: #943bd3;
@@ -26,31 +26,29 @@ ul {list-style: none;}
 footer {
     font-size: 16px;
     text-align: center;
-    margin: -20px 0 0 550px;
+    margin-top: -32px;
 color: #f2efd0;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
 h5 {
     display: block;
     position: relative; 
-    bottom: 220px;};
-
+    bottom: 190px;};
 .tempnow {
-    margin-top: -75px;
     font-size: 22px;
 }
 
 .hereNow { font-size: 33px;}
 
 .currentspecifics {
-    margin: -225px 0 0 -40px;
+    margin: -280px 0 0 -40px;
     color: #f2efd0;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
 {margin: 50px 0 50px 8px;
-    width: 335px;
+    width: 285px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
 }
@@ -97,21 +95,21 @@ h5 {
 
     
 .inputlocation h6{ 
-    padding-left: 890px;
+    padding: 30px 0 0 810px; 
     width: 100%;
     white-space: nowrap;
     font-family: 'Courier New', Courier, monospace;
   }
 
   .submitlocations h4 {
-    margin: 5px 0 0 1113px;
+    margin: 5px 0 0 1033px;
     font-size: 13px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .currenticons {
     position: relative;
-    top: -82px;
+    top: -102px;
     color: #a58b98;
     width: 375px
 
@@ -119,8 +117,8 @@ h5 {
 
 .thislocation {    position: relative;
     text-align: center;
-    bottom: 203px;
-    right: 300px;
+    bottom: 243px;
+    right: 150px;
     color: #c9a9b9;
     font-family: 'Nova Mono', monospace;
 }
