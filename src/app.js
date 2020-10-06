@@ -2,6 +2,9 @@ function convertTemperature(event){
   event.preventDefault();
   let celsiusTemperatureHigh = Math.round((farenheitTemperature - 32)* 5/9);
   let celsiusTemperatureLow = Math.round((farenheitLowTemperature - 32)* 5/9);
+  let metricWind = Math.round(windSpeed * 1.60934);
+  let windNow = document.querySelector(".windSpeed");
+  windNow.innerHTML = `Wind: ${metricWind} KPH`;
   let temperature = document.querySelector(".high-and-low");
    temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
       convertLink.classList.add("farenheit");
@@ -15,6 +18,9 @@ function revertTemperature(event){
   let farenheitTemperatureHigh = Math.round(farenheitTemperature);
   let farenheitTemperatureLow = Math.round(farenheitLowTemperature);
   let temperature = document.querySelector(".high-and-low");
+  let revertWind = windSpeed;
+  let windRevert = document.querySelector(".windSpeed");
+  windRevert.innerHTML = `Wind: ${revertWind} MPH`;
   temperature.innerHTML = `${farenheitTemperatureHigh}/${farenheitTemperatureLow}°F`;
 revertLink.classList.add("farenheit");
 convertLink.classList.remove("farenheit");}
@@ -38,7 +44,7 @@ function showWeather(response) {
 let humidity = (response.data.main.humidity);
 let currentHumidity = document.querySelector(".humidity");
 currentHumidity.innerHTML = `Humidity: ${humidity}%`;
-let windSpeed = (response.data.wind.speed);
+windSpeed = Math.round(response.data.wind.speed);
 let currentWind = document.querySelector(".windSpeed");
 currentWind.innerHTML = `Wind: ${windSpeed} MPH`
 document.querySelector(".hereNow").innerHTML=response.data.name;
@@ -208,7 +214,7 @@ currentButton.addEventListener("click", showLocation);
  
   let farenheitTemperature = null;
   let farenheitLowTemperature = null;
-  
+  let windSpeed = null;
 let dateStamp = document.querySelector(".dateStamp");
 dateStamp.innerHTML = formatDate();
 searchCity("New York");
