@@ -35,8 +35,6 @@ h5 {
     position: relative; 
     bottom: 190px;};
 
-.border {border: 5px solid #FFFFFF  !important;}
-
 .tempnow {
     font-size: 22px;
 }
@@ -65,11 +63,11 @@ h5 {
    .fridayrain, .saturdayrain, .sundayrain, 
    .mondayrain, .tuesdayrain {
        color: #f2efd0;
-       font-family: 'Nova Mono', monospace}
+       font-family: arial, sans-serif}
    
    .saturdayrain {
    position: relative;
-   bottom: 100px;
+   bottom: 90px;
    left: 120px;
    }
    .sundayrain{
@@ -90,13 +88,13 @@ h5 {
 .inputBars {padding: 30px 0 0 810px; 
 width: 100%;
 white-space: nowrap;
-font-family: 'Courier New', Courier, monospace;}
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 
   .submitlocations h4 {
-    margin: 5px 0 0 1033px;
+    margin: 5px 0 0 1047px;
     font-size: 13px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
 
 .currenticons {
@@ -112,7 +110,7 @@ font-family: 'Courier New', Courier, monospace;}
 right: 200px;
 bottom: 190px;
     color: #c9a9b9;
-    font-family: 'Nova Mono', monospace;}
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .monday, .tuesday {position: relative;
 bottom: 15px;
@@ -120,7 +118,7 @@ margin: 0 0 50px 18px;
     transition: all 100ms ease-in-out;}
 
 .sunday {position: relative;
-bottom: 20px;
+bottom: 25px;
 margin: 10px 0 0 30px;
 transition: all 100ms ease-in-out;}
 

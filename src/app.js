@@ -146,7 +146,7 @@ tomorrowDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 forcast = response.data.list[1];
  saturdayElement.innerHTML =
   `<div class="col-3">
-  <h4>&nbsp;&nbsp;${convertHours(forcast.dt*1000)}<br />
+  <h4>&nbsp;${convertHours(forcast.dt*1000)}<br />
   <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
