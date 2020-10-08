@@ -6,12 +6,12 @@ function convertTemperature(event){
   let windNow = document.querySelector(".windSpeed");
   windNow.innerHTML = `Wind: ${metricWind} KPH`;
   let forcastMax = document.querySelectorAll(".temperatureHigh");
-forcastMax.forEach(function(forcast) {  let currentTemp = forcast.innerHTML; 
-  forcast.innerHTML = Math.round((currentTemp - 32)* 5/9);
+forcastMax.forEach(function(forcast) {  farenheitMax = forcast.innerHTML; 
+  forcast.innerHTML = Math.round((farenheitMax - 32)* 5/9);
 });
 let forcastMin = document.querySelectorAll(".temperatureLow");
-forcastMin.forEach(function(forcastMin) {  let currentTemp = forcastMin.innerHTML; 
-  forcastMin.innerHTML = Math.round((currentTemp - 32)* 5/9);
+forcastMin.forEach(function(forcastMin) {  farenheitMin = forcastMin.innerHTML; 
+  forcastMin.innerHTML = Math.round((farenheitMin - 32)* 5/9);
 });
   let temperature = document.querySelector(".high-and-low");
    temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
@@ -29,11 +29,11 @@ function revertTemperature(event){
   let revertWind = windSpeed;
   let windRevert = document.querySelector(".windSpeed");
   let forcastMax = document.querySelectorAll(".temperatureHigh");
-  forcastMax.forEach(function(forcast) {  let currentTemp = forcast.innerHTML; 
-    forcast.innerHTML = Math.round(currentTemp * 9/5) + 32});
+  forcastMax.forEach(function(forcast) {  farenheitMax = forcast.innerHTML; 
+    forcast.innerHTML = Math.round(farenheitMax * 9/5) + 32});
     let forcastMin = document.querySelectorAll(".temperatureLow");
-forcastMin.forEach(function(forcastMin) {  let currentTemp = forcastMin.innerHTML; 
-  forcastMin.innerHTML = Math.round(currentTemp * 9/5) + 32});
+forcastMin.forEach(function(forcastMin) {  let farenheitMin = forcastMin.innerHTML; 
+  forcastMin.innerHTML = Math.round(farenheitMin * 9/5) + 32});
   windRevert.innerHTML = `Wind: ${revertWind} MPH`;
   temperature.innerHTML = `${farenheitTemperatureHigh}/${farenheitTemperatureLow}°F`;
 revertLink.classList.add("farenheit");
@@ -119,9 +119,6 @@ function convertHours(timestamp) {
 
 function displayForcast(response){
   let forcast = response.data.list[0];
-  let forcastLow = Math.round(forcast.main.temp.min);
-  let highTemp = Math.round(forcast.main.temp.max);
-  let lowTemp = Math.round(forcast.main.temp.min);
   let tomorrowElement = document.getElementById("tomorrowForcast");
   let tomorrowDescription = document.querySelector(".fridayrain");
  let saturdayElement = document.getElementById("saturdayForcast");
@@ -230,10 +227,11 @@ function showLocation(event){
 let currentButton = document.querySelector("#currentLocation");
 currentButton.addEventListener("click", showLocation);
 
- 
+ let farenheitMin = null;
+ let farenheitMax = null;
   let farenheitTemperature = null;
   let farenheitLowTemperature = null;
   let windSpeed = null;
 let dateStamp = document.querySelector(".dateStamp");
 dateStamp.innerHTML = formatDate();
-searchCity("New York");
+searchCity("New York");   
