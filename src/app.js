@@ -16,7 +16,10 @@ forcastMin.forEach(function(forcastMin) {  farenheitMin = forcastMin.innerHTML;
   let temperature = document.querySelector(".high-and-low");
    temperature.innerHTML = `${celsiusTemperatureHigh}/${celsiusTemperatureLow}°C`;
       convertLink.classList.add("farenheit");
-   revertLink.classList.remove("farenheit");}
+   revertLink.classList.remove("farenheit");
+   convertLink.removeEventListener("click", convertTemperature);
+  revertLink.addEventListener("click", revertTemperature);
+}
 let convertLink = document.querySelector(".celsius");
 convertLink.addEventListener("click", convertTemperature);
 
@@ -38,10 +41,11 @@ forcastMin.forEach(function(forcastMin) {  let farenheitMin = forcastMin.innerHT
   temperature.innerHTML = `${farenheitTemperatureHigh}/${farenheitTemperatureLow}°F`;
 revertLink.classList.add("farenheit");
 convertLink.classList.remove("farenheit");
+convertLink.addEventListener("click", convertTemperature);
+revertLink.removeEventListener("click", revertTemperature);
 }
 
 let revertLink = document.querySelector(".farenheit");
-revertLink.addEventListener("click", revertTemperature)
 
 function showWeather(response) {
   farenheitTemperature = response.data.main.temp;

@@ -57,7 +57,7 @@ h5 {
 .fridayrain {
     position: relative;
     bottom: 150px;
-    left: 110px;
+    left: 120px;
    }
    
    .fridayrain, .saturdayrain, .sundayrain, 
@@ -67,8 +67,8 @@ h5 {
    
    .saturdayrain {
    position: relative;
-   bottom: 90px;
-   left: 120px;
+   bottom: 95px;
+   left: 130px;
    }
    .sundayrain{
     position: relative;
@@ -79,7 +79,7 @@ h5 {
    .mondayrain, .tuesdayrain { 
        position: relative;
        bottom: 155px;
-       left: 140px;
+       left: 130px;
    }
    
    .tuesdayTemp, .mondayTemp { position: relative;
