@@ -142,7 +142,7 @@ tomorrowDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 forcast = response.data.list[1];
  saturdayElement.innerHTML =
   `<div class="col-">
-  <h4>&nbsp;&nbsp;${convertHours(forcast.dt*1000)}<br />
+  <h4>&nbsp;&nbsp;&nbsp;${convertHours(forcast.dt*1000)}<br />
   <img id="saturdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
@@ -153,7 +153,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[2];
  sundayElement.innerHTML =
   `<div class="col-">
-  <h4>&nbsp ${convertHours(forcast.dt*1000)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="sundaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
@@ -163,7 +163,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[3];
  mondayElement.innerHTML =
   `<div class="col-">
-  <h4>&nbsp; ${convertHours(forcast.dt*1000)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="mondaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
@@ -174,7 +174,7 @@ forcast = response.data.list[1];
   forcast = response.data.list[4];
  tuesdayElement.innerHTML =
   `<div class="col-">
-  <h4>&nbsp; ${convertHours(forcast.dt*1000)} <br />
+  <h4> ${convertHours(forcast.dt*1000)} <br />
   <img id="tuesdaySun" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow"><span class="temperatureHigh">
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
