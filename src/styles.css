@@ -1,8 +1,8 @@
 body {
     margin-left: 25px;
-background: #322f3d;
-color: #a58b98;
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background: radial-gradient(#322f3d,#15051e);
+    color: #7e777a;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
 max-width: 1250px;}
@@ -72,7 +72,7 @@ h5 {
    }
    .sundayrain{
     position: relative;
-    bottom: 120px;
+    bottom: 100px;
     left: 140px;
    }
    
@@ -112,17 +112,15 @@ bottom: 190px;
     color: #c9a9b9;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
-.monday, .tuesday {position: relative;
-bottom: 15px;
-margin: 0 0 50px 18px;
+.monday, .tuesday {
+margin: 10px 0 60px 18px;
     transition: all 100ms ease-in-out;}
 
-.sunday {position: relative;
-bottom: 25px;
+.sunday {
 margin: 10px 0 0 30px;
 transition: all 100ms ease-in-out;}
 
-.saturday {margin: 10px 0 0 18px;
+.saturday {margin: 5px 0 0 18px;
     transition: all 100ms ease-in-out;
     position: relative;
 top: 5px;}
