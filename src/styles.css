@@ -30,10 +30,9 @@ footer {
 color: #f2efd0;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
-h5 {
-    display: block;
-    position: relative; 
-    bottom: 190px;};
+h5 {position: relative;
+bottom: 110px;
+margin: none;}
 
 .tempnow {
     font-size: 22px;
@@ -41,14 +40,16 @@ h5 {
 
 .hereNow { font-size: 33px;}
 
-.currentspecifics {
-    margin: -280px 0 0 -40px;
+.currentSpecifics {
+position: relative;
+bottom: 105px;
+right: 30px;
     color: #f2efd0;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .friday
-{margin: 50px 0 50px 8px;
+{margin: -170px 0 55px 8px;
     width: 285px;
     font-size: 12pt;
     transition: all 100ms ease-in-out;
@@ -107,8 +108,8 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 .thislocation {text-align: center;
     position: relative;
-right: 200px;
-bottom: 190px;
+right: 250px;
+bottom: 330px;
     color: #c9a9b9;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
