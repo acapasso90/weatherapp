@@ -1,3 +1,7 @@
+a, a:hover, a:visited { color: #943bd3;
+    text-decoration: none;
+}
+
 body {
     margin-left: 25px;
     background: radial-gradient(#322f3d,#15051e);
@@ -6,21 +10,6 @@ body {
 font-size: 18px;
 text-transform: capitalize;
 max-width: 1250px;}
-
-
-a, a:hover, a:visited { color: #943bd3;
-    text-decoration: none;
-}
-
-
-input, textarea { 
-     padding: 5px;
-    background: #322f3d;
-    color: #f2efd0;
-border: 1px solid #a58b98;}
-
-ul {list-style: none;}
-
 
 footer {
     font-size: 16px;
@@ -33,11 +22,20 @@ h5 {position: relative;
 bottom: 110px;
 margin: none;}
 
-.tempnow {
-    font-size: 22px;
-}
+input, textarea { 
+     padding: 5px;
+    background: #322f3d;
+    color: #f2efd0;
+border: 1px solid #a58b98;}
 
-.hereNow { font-size: 33px;}
+ul {list-style: none;}
+
+.currenticons {
+    position: relative;
+    top: -102px;
+    color: #a58b98;
+    width: 375px
+}
 
 .currentSpecifics {
 position: relative;
@@ -47,6 +45,19 @@ right: 30px;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
+.farenheit {color: #f2efd0;
+        cursor: default;
+        text-decoration: none;}
+
+ .farenheit:hover {text-decoration: none;
+    cursor: default;
+    color: #f2efd0;}
+    
+.farenheit:visited {color: #f2efd0;
+    cursor: default;
+    text-decoration: none;}
+
+
 .friday
 {margin: -170px 0 55px 8px;
     width: 285px;
@@ -54,71 +65,38 @@ right: 30px;
     transition: all 100ms ease-in-out;
 }
 
-.fridayrain {
-    position: relative;
+.fridayrain {position: relative;
     bottom: 150px;
-    left: 120px;
-   }
-   
-   .fridayrain, .saturdayrain, .sundayrain, 
-   .mondayrain, .tuesdayrain {
-       color: #f2efd0;
-       font-family: arial, sans-serif}
-   
-   .saturdayrain {
-   position: relative;
-   bottom: 95px;
-   left: 130px;
-   }
-   .sundayrain{
-    position: relative;
-    bottom: 100px;
-    left: 140px;
-   }
-   
-   .mondayrain, .tuesdayrain { 
-       position: relative;
-       bottom: 155px;
-       left: 130px;
-   }
-   
-   .tuesdayTemp, .mondayTemp { position: relative;
-   top: 45px;
-   right: 60px;}
+right: 970px;}
+
+.fridayrain, .saturdayrain, .sundayrain, 
+.mondayrain, .tuesdayrain {
+    color: #f2efd0;
+    font-family: arial, sans-serif}
+
+
+#fridaySun, #saturdaySun, #sundaySun, #mondaySun, 
+#tuesdaySun {position: relative;
+            right: 10px;}
+
+.hereNow { font-size: 33px;}
+
 .inputBars {padding: 30px 0 0 810px; 
-width: 100%;
-white-space: nowrap;
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
-
-
-  .submitlocations h4 {
-    margin: 5px 0 0 1047px;
-    font-size: 13px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-}
-
-.currenticons {
-    position: relative;
-    top: -102px;
-    color: #a58b98;
-    width: 375px
-
-}
-
-.thislocation {text-align: center;
-    position: relative;
-right: 250px;
-bottom: 270px;
-    color: #c9a9b9;
+    width: 100%;
+    white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
-
+    
+           
 .monday, .tuesday {
-margin: 10px 0 60px 18px;
-    transition: all 100ms ease-in-out;}
+    margin: 10px 0 60px 18px;
+        transition: all 100ms ease-in-out;}
 
-.sunday {
-margin: 10px 0 0 30px;
-transition: all 100ms ease-in-out;}
+.mondayrain, .tuesdayrain {position: relative;
+bottom: 150px;
+left: 180px;}
+
+
+.right {float: right;}
 
 .saturday {margin: 5px 0 0 18px;
     transition: all 100ms ease-in-out;
@@ -129,17 +107,30 @@ top: 5px;}
 .saturday:hover, .sunday:hover, .monday:hover, 
 .tuesday:hover, .friday:hover  {background: #5b394b}
 
-.farenheit:hover {text-decoration: none;
-    cursor: default;
-    color: #f2efd0;}
-
-    .farenheit {color: #f2efd0;
-        cursor: default;
-    text-decoration: none;}
-
-    .farenheit:visited {color: #f2efd0;
-        cursor: default;
-    text-decoration: none;}
-    #fridaySun, #saturdaySun, #sundaySun, #mondaySun, #tuesdaySun {position: relative;
-        right: 10px;}
+.saturdayrain, .sundayrain {position: relative;
+    bottom: 100px;
+    right: 20px;}
     
+.submitlocations h4 {
+        margin: 5px 0 0 1047px;
+        font-size: 13px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    }
+    
+.sunday {
+     margin: 10px 0 0 30px;
+    transition: all 100ms ease-in-out;}
+ 
+.tempnow {
+    font-size: 22px;
+        }
+.thislocation {text-align: center;
+        position: relative;
+        right: 250px;
+        bottom: 270px;
+        color: #c9a9b9;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+
+.tuesdayTemp, .mondayTemp { position: relative;
+            top: 45px;
+            right: 60px;}
