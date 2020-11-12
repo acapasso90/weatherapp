@@ -4,7 +4,8 @@ a, a:hover, a:visited { color: #943bd3;
 
 body {
     margin-left: 25px;
-    background: radial-gradient(#322f3d,#15051e);
+    background: radial-gradient(circle, rgb(14, 2, 26) 23%, rgb(2, 9, 27) 100%);
+    min-height: 600px;
     color: #7e777a;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
@@ -14,7 +15,7 @@ max-width: 1250px;}
 footer {
     font-size: 16px;
     text-align: center;
-    margin-top: -32px;
+    margin-top: -82px;
 color: #f2efd0;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs}
 
@@ -70,16 +71,6 @@ right: 30px;
     transition: all 100ms ease-in-out;
 }
 
-.status2 {position: relative;
-    bottom: 100px;
-right: 40px;}
-
-.status2, .status3, .status4, 
-.status5, .status6 {
-    color: #f2efd0;
-    font-family: arial, sans-serif}
-
-
 #icon2, #icon3, #icon4, #icon5, 
 #icon6 {position: relative;
             right: 10px;}
@@ -102,11 +93,6 @@ left: 120px;}
 
 .status5 {padding-left: 35px;}
 
-.row {position: relative; 
-bottom: 120px;
-display: flex;}
-
-.right {float: right;}
 
 .forecast3 {
     transition: all 100ms ease-in-out;}
@@ -115,9 +101,27 @@ display: flex;}
 .forecast3:hover, .forecast4:hover, .forecast5:hover, 
 .forecast6:hover, .forecast2:hover  {background: #5b394b}
 
+.right {float: right;}
+
+.row {position: relative; 
+    bottom: 170px;
+    display: flex;
+    padding-left: 10px;}
+
+.status2 {position: relative;
+    bottom: 100px;
+right: 40px;}
+
+.status2, .status3, .status4, 
+.status5, .status6 {
+    color: #f2efd0;
+    font-family: arial, sans-serif}
+
+
 .status3, .status4 {position: relative;
     bottom: 100px;
     right: 20px;}
+
     
 .submitlocations h4 {
         margin: 5px 0 0 1107px;
