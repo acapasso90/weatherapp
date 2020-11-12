@@ -30,9 +30,15 @@ border: 1px solid #a58b98;}
 
 ul {list-style: none;}
 
+.btn {min-width: 112.109px;}
+
+.container {text-align: center; 
+margin: 0;}
+
 .currenticons {
     position: relative;
     top: -102px;
+    right: 105px;
     color: #a58b98;
     width: 375px
 }
@@ -58,67 +64,68 @@ right: 30px;
     text-decoration: none;}
 
 
-.friday
-{margin: -170px 0 55px 8px;
-    width: 285px;
+.forecast2
+{
     font-size: 12pt;
     transition: all 100ms ease-in-out;
 }
 
-.fridayrain {position: relative;
-    bottom: 150px;
-right: 970px;}
+.status2 {position: relative;
+    bottom: 100px;
+right: 40px;}
 
-.fridayrain, .saturdayrain, .sundayrain, 
-.mondayrain, .tuesdayrain {
+.status2, .status3, .status4, 
+.status5, .status6 {
     color: #f2efd0;
     font-family: arial, sans-serif}
 
 
-#fridaySun, #saturdaySun, #sundaySun, #mondaySun, 
-#tuesdaySun {position: relative;
+#icon2, #icon3, #icon4, #icon5, 
+#icon6 {position: relative;
             right: 10px;}
 
 .hereNow { font-size: 33px;}
 
-.inputBars {padding: 30px 0 0 810px; 
+.inputBars {padding: 30px 0 0 870px; 
     width: 100%;
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
     
            
-.monday, .tuesday {
-    margin: 10px 0 60px 18px;
+.forecast5, .forecast6 {
+    min-width: 232.188px;
         transition: all 100ms ease-in-out;}
 
-.mondayrain, .tuesdayrain {position: relative;
-bottom: 150px;
-left: 180px;}
+.status5, .status6 {position: relative;
+bottom: 100px;
+left: 120px;}
 
+.status5 {padding-left: 35px;}
+
+.row {position: relative; 
+bottom: 120px;
+display: flex;}
 
 .right {float: right;}
 
-.saturday {margin: 5px 0 0 18px;
-    transition: all 100ms ease-in-out;
-    position: relative;
-top: 5px;}
+.forecast3 {
+    transition: all 100ms ease-in-out;}
 
 
-.saturday:hover, .sunday:hover, .monday:hover, 
-.tuesday:hover, .friday:hover  {background: #5b394b}
+.forecast3:hover, .forecast4:hover, .forecast5:hover, 
+.forecast6:hover, .forecast2:hover  {background: #5b394b}
 
-.saturdayrain, .sundayrain {position: relative;
+.status3, .status4 {position: relative;
     bottom: 100px;
     right: 20px;}
     
 .submitlocations h4 {
-        margin: 5px 0 0 1047px;
+        margin: 5px 0 0 1107px;
         font-size: 13px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
     }
     
-.sunday {
-     margin: 10px 0 0 30px;
+.forecast4 {
     transition: all 100ms ease-in-out;}
  
 .tempnow {
@@ -126,11 +133,12 @@ top: 5px;}
         }
 .thislocation {text-align: center;
         position: relative;
-        right: 250px;
-        bottom: 270px;
+        left: 150px;
+        bottom: 330px;
         color: #c9a9b9;
+        max-width: 400px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
-.tuesdayTemp, .mondayTemp { position: relative;
+.temp6, .temp5 { position: relative;
             top: 45px;
             right: 60px;}

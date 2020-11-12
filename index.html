@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <span class="inputlocation">
             <h6>
         <form class="inputBars">
@@ -34,11 +34,10 @@
          class="btn btn-dark shadow-sm" ; />
         </h4>
     </span>
-</div>
         <div class="currenticons">
             <h1>
-                  <img id="sun" alt="" src="">
-                  <div class="high-and-low">
+             <img id="sun" alt="" src="">
+             <div class="high-and-low">
             <span id="tempNow-high">84</span>/<span id="tempNow-low">72</span>°F</h1>
             </div>
         </div>
@@ -57,7 +56,7 @@
          Wind: 5 mph
      </li>
      </ul>
-    </div>
+         </div>
                 <div class="thislocation"> 
                     <span class="hereNow"> N </span>
                     <br/>
@@ -67,60 +66,59 @@
                 </div>
                 </div>
         </span>
-    </div>
 
-<div class="friday" id="tomorrowForcast">
+<div class="row row-cols-5">
+    <div class="col-">
+        <div class="forecast2" id="forecastTwo">
     <h4> Friday <br />
-        <img id="fridaySun" src="https://openweathermap.org/img/wn/01d.png">
+<img id="icon2" src="https://openweathermap.org/img/wn/01d.png" />
 <div id="tomorrowTemp"><small>86°/72°F</small></div>
     </h4>
-</div>
-</div>
-<div class="right">
-    <span class="fridayrain"> 
-       <em>Precipitation: 20% </em>
-    </span>
-</div>
-
-    <div class="row row-cols-4">
+        </div>
+        <div class="right">
+            <span class="status2"> 
+            <em>Precipitation: 20% </em>
+            </span>
+        </div>
+    </div>
         <div class="col-">
-<div class="saturday" id="saturdayForcast">
+<div class="forecast3" id="forecastThree">
     <h4> Saturday <br />
-        <img id="saturdaySun" src="https://openweathermap.org/img/wn/01d.png">
+        <img id="icon3" src="https://openweathermap.org/img/wn/01d.png">
         <br />
        <small> 79°/63°F </small>
     </h4>
 </div>
 <div class="right">
-<span class="saturdayrain"> 
+<span class="status3"> 
     <em>Status </em>
  </span>
 </div>
 </div>
     <div class="col-">
-        <div class="sunday" id="sundayForcast">
+        <div class="forecast4" id="forecastFour">
             <h4> Sunday <br />
-                <img id="sundaySun" src="https://openweathermap.org/img/wn/01d.png">
+                <img id="icon4" src="https://openweathermap.org/img/wn/01d.png">
 
             <br />
             <small> 77°/55°F</small>
         </h4>
     </div>
     <div class="right">
-    <span class="sundayrain">
+    <span class="status4">
         <em>Precipitation: 10%</em>
     </span>
     </div>
 </div>
 
         <div class="col-">
-            <div class="monday" id="mondayForcast">
+            <div class="forecast5" id="forecastFive">
                 <h4>Monday <br />
-                    <img id="mondaySun" src="https://openweathermap.org/img/wn/01d.png">
-           <span class="mondayTemp"><small> 77°/59°F</small></span> 
+                    <img id="icon5" src="https://openweathermap.org/img/wn/01d.png">
+           <span class="temp5"><small> 77°/59°F</small></span> 
                 </h4>
             </div>
-            <span class="mondayrain">
+            <span class="status5">
                 <div class="right">
                 <em>Precipitation: 10%</em>
             </span>
@@ -128,18 +126,19 @@
         </div>
 
             <div class="col-">
-                <div class="tuesday" id="tuesdayForcast">
+                <div class="forecast6" id="forecastSix">
                     <h4> Tuesday <br />
-                        <img id="tuesdaySun" src="https://openweathermap.org/img/wn/01d.png">
-                      <span class="tuesdayTemp">  <small> 73°/66°F</small></span></h4> 
+                        <img id="icon6" src="https://openweathermap.org/img/wn/01d.png">
+                      <span class="temp6">  <small> 73°/66°F</small></span></h4> 
                 </div>
-                <span class="tuesdayrain">
+                <span class="status6">
                     <div class="right">
                     <em> Precipitation: 20% </em>
                 </div>
             </div>
 </div>
 <footer> <a href="https://github.com/acapasso90/weatherapp" target="_blank" class="githubLink"> Open-source code</a> by  <a href="https://www.amandacapasso.com" target="_blank">Amanda Capasso</a></footer>
+</div>
 </div>
 <script src="src/app.js" defer></script>
 </body>
