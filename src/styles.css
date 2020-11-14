@@ -3,14 +3,16 @@ a, a:hover, a:visited { color: #943bd3;
 }
 
 body {
-    margin-left: 25px;
+    margin: 10px 0 0 20px;
     background: radial-gradient(circle, rgb(14, 2, 26) 23%, rgb(2, 9, 27) 100%);
     min-height: 600px;
     color: #7e777a;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
-max-width: 1250px;}
+max-width: 1300px;
+border: 2px solid#C9A9B9;
+border-radius: 8px;}
 
 footer {
     font-size: 16px;
@@ -31,7 +33,9 @@ border: 1px solid #a58b98;}
 
 ul {list-style: none;}
 
-.btn {min-width: 112.109px;}
+.btn {min-width: 118.109px;}
+
+.celsius-farenheit {padding: 5px 0 0 5px;}
 
 .container {text-align: center; 
 margin: 0;}
@@ -46,7 +50,7 @@ margin: 0;}
 
 .currentSpecifics {
 position: relative;
-bottom: 105px;
+bottom: 115px;
 right: 30px;
     color: #f2efd0;
     font-size: 17px;
@@ -71,13 +75,17 @@ right: 30px;
     transition: all 100ms ease-in-out;
 }
 
+
+.hereNow { font-size: 33px;}
+
+.high-and-low {position: relative;
+left: 10px;}
+
 #icon2, #icon3, #icon4, #icon5, 
 #icon6 {position: relative;
             right: 10px;}
 
-.hereNow { font-size: 33px;}
-
-.inputBars {padding: 30px 0 0 870px; 
+.inputBars {padding: 30px 0 0 900px; 
     width: 100%;
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
@@ -89,9 +97,9 @@ right: 30px;
 
 .status5, .status6 {position: relative;
 bottom: 100px;
-left: 120px;}
+left: 125px;}
 
-.status5 {padding-left: 35px;}
+.status5 {padding-right: 15px;}
 
 
 .forecast3 {
@@ -106,11 +114,12 @@ left: 120px;}
 .row {position: relative; 
     bottom: 170px;
     display: flex;
-    padding-left: 10px;}
+    max-width: 1310px;
+    padding-left: 18px;}
 
 .status2 {position: relative;
     bottom: 100px;
-right: 40px;}
+right: 15px;}
 
 .status2, .status3, .status4, 
 .status5, .status6 {
@@ -124,7 +133,7 @@ right: 40px;}
 
     
 .submitlocations h4 {
-        margin: 5px 0 0 1107px;
+        margin: 5px 0 0 1140px;
         font-size: 13px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
     }
@@ -133,8 +142,8 @@ right: 40px;}
     transition: all 100ms ease-in-out;}
  
 .tempnow {
-    font-size: 22px;
-        }
+    font-size: 24px;
+}
 .thislocation {text-align: center;
         position: relative;
         left: 150px;
