@@ -35,18 +35,22 @@ ul {list-style: none;}
 
 .btn {min-width: 118.109px;}
 
-.celsius-farenheit {padding: 5px 0 0 5px;}
+.celsius-farenheit {padding: 5px 0 0 10px;}
 
-.container {text-align: center; 
-margin: 0;}
+.container {
+    margin-left: 0;}
 
 .currenticons {
     position: relative;
     top: -102px;
-    right: 105px;
+    right: 5px;
     color: #a58b98;
     width: 375px
 }
+
+.currenticons img {margin-left: 30px;
+min-width: 135px;
+min-height: 135px;}
 
 .currentSpecifics {
 position: relative;
@@ -55,6 +59,8 @@ right: 30px;
     color: #f2efd0;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+
+.dateStamp {font-size: 22px;}
 
 .farenheit {color: #f2efd0;
         cursor: default;
@@ -79,7 +85,8 @@ right: 30px;
 .hereNow { font-size: 33px;}
 
 .high-and-low {position: relative;
-left: 10px;}
+left: 10px;
+font-size: 52px;}
 
 #icon2, #icon3, #icon4, #icon5, 
 #icon6 {position: relative;
@@ -101,6 +108,7 @@ left: 125px;}
 
 .status5 {padding-right: 15px;}
 
+.statusNow {font-size: 26px;}
 
 .forecast3 {
     transition: all 100ms ease-in-out;}
@@ -141,13 +149,11 @@ right: 15px;}
 .forecast4 {
     transition: all 100ms ease-in-out;}
  
-.tempnow {
-    font-size: 24px;
-}
+
 .thislocation {text-align: center;
         position: relative;
-        left: 150px;
-        bottom: 330px;
+        left: 250px;
+        bottom: 360px;
         color: #c9a9b9;
         max-width: 400px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
