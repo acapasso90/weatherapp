@@ -10,7 +10,7 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
-max-width: 1300px;
+max-width: 1272px;
 border: 2px solid#C9A9B9;
 border-radius: 8px;}
 
@@ -36,6 +36,10 @@ ul {list-style: none;}
 .btn {min-width: 118.109px;}
 
 .celsius-farenheit {padding: 5px 0 0 10px;}
+
+.col- {max-width: 210px;
+    margin-left: 28px;
+    margin-right: 20px;}
 
 .container {
     margin-left: 0;}
@@ -82,6 +86,19 @@ white-space: nowrap;}
     transition: all 100ms ease-in-out;
 }
 
+.forecast3 {
+    transition: all 100ms ease-in-out;}
+
+    .forecast4 {
+        transition: all 100ms ease-in-out;}
+
+.forecast3:hover, .forecast4:hover, .forecast5:hover, 
+.forecast6:hover, .forecast2:hover  {background: #5b394b}
+
+           
+.forecast5, .forecast6 {
+    min-width: 232.188px;
+        transition: all 100ms ease-in-out;}
 
 .hereNow { font-size: 50px;}
 
@@ -98,33 +115,20 @@ font-size: 52px;}
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
     
-           
-.forecast5, .forecast6 {
-    min-width: 232.188px;
-        transition: all 100ms ease-in-out;}
 
-
-
-.statusNow {font-size: 35px;
-color: rgb(221, 201, 253);}
-
-.forecast3 {
-    transition: all 100ms ease-in-out;}
-
-
-.forecast3:hover, .forecast4:hover, .forecast5:hover, 
-.forecast6:hover, .forecast2:hover  {background: #5b394b}
 
 .right {float: right;}
 
 .row {position: relative; 
     bottom: 170px;
     display: flex;
-    max-width: 1380px;
-    padding-left: 50px;}
+    max-width: 1380px;}
 
 
 
+    .statusNow {font-size: 35px;
+        color: rgb(221, 201, 253);}
+        
     
 .submitlocations h4 {
         margin: 5px 0 0 1040px;
@@ -132,8 +136,6 @@ color: rgb(221, 201, 253);}
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
     }
     
-.forecast4 {
-    transition: all 100ms ease-in-out;}
  
 
 .thislocation {text-align: center;
