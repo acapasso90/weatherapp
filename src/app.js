@@ -104,51 +104,41 @@ function formatDate() {
 
 function convertHours(timestamp) {
   let now = new Date(timestamp);
-  let hours = now.getHours();
- if (hours > 12) {   hours -= 12;}
-  else if (hours === 0) {hours === 12;} 
-  else if (hours < 10) {hours = `0${hours}`;  }
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
-  return `${hours}:${minutes}`;
+  let hours = now.getHours();
+ if (hours > 12) { hours -= 12;   return (`${hours}:${minutes} PM`);}
+  else {return (`${hours}:${minutes} AM`);}
 }
 
 function displayForcast(response){
   let forcast = response.data.list[0];
   let forecast2 = document.getElementById("forecastTwo");
-  let secondForecastDescription = document.querySelector(".status2");
  let forecast3 = document.getElementById("forecastThree");
- let thirdForecastDescription = document.querySelector(".status3");
  let forecast4 = document.getElementById("forecastFour");
- let fourthForecastDescription = document.querySelector(".status4");
  let forecast5 = document.getElementById("forecastFive");
- let fifthForecastDescription = document.querySelector(".status5");
  let forecast6 = document.getElementById("forecastSix");
- let sixthForecastDescription = document.querySelector(".status6");
 forecast2.innerHTML = `
 <div class="col-">
-<h4>&nbsp;&nbsp;${convertHours(forcast.dt*1000)} <br />
+<h4>${convertHours(forcast.dt*1000)} <br />
     <img id="icon2" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
 <div class="highLow">
 <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
 </h4>
 </div>
 </div>`;
-secondForecastDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 forcast = response.data.list[1];
 forecast3.innerHTML =
   `<div class="col-">
-  <h4>&nbsp;&nbsp;&nbsp;${convertHours(forcast.dt*1000)}<br />
+  <h4>${convertHours(forcast.dt*1000)}<br />
   <img id="icon3" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
-  thirdForecastDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
   forcast = response.data.list[2];
   forecast4.innerHTML =
   `<div class="col-">
@@ -158,7 +148,6 @@ forecast3.innerHTML =
   <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
  </h4>
   </div>` 
-  fourthForecastDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
   forcast = response.data.list[3];
   forecast5.innerHTML =
   `<div class="col-">
@@ -169,7 +158,6 @@ forecast3.innerHTML =
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
-  fifthForecastDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
   forcast = response.data.list[4];
   forecast6.innerHTML =
   `<div class="col-">
@@ -179,7 +167,6 @@ forecast3.innerHTML =
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
   </div>` 
-  sixthForecastDescription.innerHTML = `<em>${forcast.weather[0].description}</em>`;
 }
 
 

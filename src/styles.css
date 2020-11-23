@@ -60,7 +60,8 @@ right: 30px;
     font-size: 17px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
-.dateStamp {font-size: 22px;}
+.dateStamp {font-size: 26px;
+white-space: nowrap;}
 
 .farenheit {color: #f2efd0;
         cursor: default;
@@ -82,7 +83,7 @@ right: 30px;
 }
 
 
-.hereNow { font-size: 33px;}
+.hereNow { font-size: 50px;}
 
 .high-and-low {position: relative;
 left: 10px;
@@ -92,7 +93,7 @@ font-size: 52px;}
 #icon6 {position: relative;
             right: 10px;}
 
-.inputBars {padding: 30px 0 0 900px; 
+.inputBars {padding: 30px 0 0 800px; 
     width: 100%;
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
@@ -102,13 +103,10 @@ font-size: 52px;}
     min-width: 232.188px;
         transition: all 100ms ease-in-out;}
 
-.status5, .status6 {position: relative;
-bottom: 100px;
-left: 125px;}
 
-.status5 {padding-right: 15px;}
 
-.statusNow {font-size: 26px;}
+.statusNow {font-size: 35px;
+color: rgb(221, 201, 253);}
 
 .forecast3 {
     transition: all 100ms ease-in-out;}
@@ -122,26 +120,14 @@ left: 125px;}
 .row {position: relative; 
     bottom: 170px;
     display: flex;
-    max-width: 1310px;
-    padding-left: 18px;}
-
-.status2 {position: relative;
-    bottom: 100px;
-right: 15px;}
-
-.status2, .status3, .status4, 
-.status5, .status6 {
-    color: #f2efd0;
-    font-family: arial, sans-serif}
+    max-width: 1380px;
+    padding-left: 50px;}
 
 
-.status3, .status4 {position: relative;
-    bottom: 100px;
-    right: 20px;}
 
     
 .submitlocations h4 {
-        margin: 5px 0 0 1140px;
+        margin: 5px 0 0 1040px;
         font-size: 13px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
     }
@@ -152,8 +138,8 @@ right: 15px;}
 
 .thislocation {text-align: center;
         position: relative;
-        left: 250px;
-        bottom: 360px;
+        left: 280px;
+        bottom: 400px;
         color: #c9a9b9;
         max-width: 400px;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
