@@ -1,0 +1,124 @@
+a, a:hover, a:visited { color: #943bd3;
+    text-decoration: none;
+}
+
+body {
+    margin: 5px 0 0 5px;
+    background: radial-gradient(circle, rgb(14, 2, 26) 23%, rgb(2, 9, 27) 100%);
+    max-height: 990px;
+    color: #7e777a;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 18px;
+text-transform: capitalize;
+max-width: 322px;
+border: 2px solid#C9A9B9;
+border-radius: 8px;}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -222px;
+    white-space: nowrap;
+color: #f2efd0;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+
+
+h5 {font-size: 20px;}
+
+h6 {font-size: 13px;}
+input, textarea { 
+    padding: 5px;
+   background: #322f3d;
+   color: #f2efd0;
+border: 1px solid #a58b98;}
+
+ul {list-style: none;}
+
+.btn {min-width: 100.109px;
+font-size: 12px;
+padding: 5px 10px;}
+
+.celsius-farenheit {position: relative;
+top: 45px;
+left: 180px;
+font-size: 14px;}
+
+.col- {white-space: nowrap;
+    position: relative;
+bottom: 30px;}
+.currenticons {
+    position: relative;
+    top: 55px;
+    left: 185px;
+    color: #a58b98;
+    width: 250px;
+
+}
+
+.currenticons img {margin-left: 10px;
+    max-width: 110px;
+    max-height: 110px;}
+
+    .currentSpecifics {
+        position: relative;
+        top: 30px;
+        text-align: right;
+        right: 5px;
+            color: #f2efd0;
+            font-size: 15px;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+
+            .dateStamp {font-size: 14px;
+                white-space: nowrap;}
+
+            .farenheit {color: #f2efd0;
+                cursor: default;
+                text-decoration: none;}
+        
+         .farenheit:hover {text-decoration: none;
+            cursor: default;
+            color: #f2efd0;}
+            
+        .farenheit:visited {color: #f2efd0;
+            cursor: default;
+            text-decoration: none;}
+
+
+            .hereNow { font-size: 20px;}
+
+            .high-and-low {
+                font-size: 30px;}
+
+            .inputBars {padding-top: 5px;
+                position: relative;
+                right: 14px; 
+    white-space: nowrap;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+    .right {float: right;}
+
+    .row {position: relative; 
+        bottom: 170px;
+        left: 30px;
+        display: flex;
+        flex-direction: column;
+        max-width: 1380px;}
+
+#searchInput {min-width: 210px;}
+
+.statusNow {font-size: 21px;
+    color: rgb(221, 201, 253);}
+
+.submitlocations h4 {
+  position: relative;
+  left: 200px;
+  bottom: 3px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.thislocation {text-align: center;
+    position: relative;
+    right: 40px;
+    bottom: 270px;
+    color: #c9a9b9;
+    max-width: 400px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
