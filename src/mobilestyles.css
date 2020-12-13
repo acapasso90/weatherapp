@@ -10,7 +10,7 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 18px;
 text-transform: capitalize;
-max-width: 322px;
+max-width: 349px;
 border: 2px solid#C9A9B9;
 border-radius: 8px;}
 
@@ -34,13 +34,13 @@ border: 1px solid #a58b98;}
 
 ul {list-style: none;}
 
-.btn {min-width: 100.109px;
-font-size: 12px;
+.btn {min-width: 105.109px;
+font-size: 13px;
 padding: 5px 10px;}
 
 .celsius-farenheit {position: relative;
 top: 45px;
-left: 180px;
+left: 208px;
 font-size: 14px;}
 
 .col- {white-space: nowrap;
@@ -49,7 +49,7 @@ bottom: 30px;}
 .currenticons {
     position: relative;
     top: 55px;
-    left: 185px;
+    left: 210px;
     color: #a58b98;
     width: 250px;
 
@@ -91,7 +91,7 @@ bottom: 30px;}
 
             .inputBars {padding-top: 5px;
                 position: relative;
-                right: 14px; 
+                right: 1px; 
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
     .right {float: right;}
@@ -110,14 +110,14 @@ bottom: 30px;}
 
 .submitlocations h4 {
   position: relative;
-  left: 200px;
+  left: 212px;
   bottom: 3px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
 
 .thislocation {text-align: center;
     position: relative;
-    right: 40px;
+    right: 45px;
     bottom: 270px;
     color: #c9a9b9;
     max-width: 400px;
