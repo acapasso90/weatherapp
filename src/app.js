@@ -59,7 +59,7 @@ function showWeather(response) {
   let currentStatus = document.querySelector(".statusNow");
   currentStatus.innerHTML = `${status}`;
   icon.setAttribute("alt", response.data.weather[0].description);
-  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 let humidity = (response.data.main.humidity);
 let currentHumidity = document.querySelector(".humidity");
 currentHumidity.innerHTML = `Humidity: ${humidity}%`;
@@ -123,7 +123,7 @@ function displayForcast(response){
 forecast2.innerHTML = `
 <div class="col-">
 <h4>${convertHours(forcast.dt*1000)} <br />
-    <img id="icon2" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
+    <img id="icon2" src="https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[0].description>
 <div class="highLow">
 <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
 </h4>
@@ -133,7 +133,7 @@ forcast = response.data.list[1];
 forecast3.innerHTML =
   `<div class="col-">
   <h4>${convertHours(forcast.dt*1000)}<br />
-  <img id="icon3" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <img id="icon3" src="https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
@@ -143,7 +143,7 @@ forecast3.innerHTML =
   forecast4.innerHTML =
   `<div class="col-">
   <h4> ${convertHours(forcast.dt*1000)} <br />
-  <img id="icon4" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <img id="icon4" src="https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
  </h4>
@@ -152,7 +152,7 @@ forecast3.innerHTML =
   forecast5.innerHTML =
   `<div class="col-">
   <h4> ${convertHours(forcast.dt*1000)} <br />
-  <img id="icon5" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <img id="icon5" src="https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow">
   <span class="temperatureHigh">
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
@@ -162,7 +162,7 @@ forecast3.innerHTML =
   forecast6.innerHTML =
   `<div class="col-">
   <h4> ${convertHours(forcast.dt*1000)} <br />
-  <img id="icon6" src="http://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
+  <img id="icon6" src="https://openweathermap.org/img/wn/${forcast.weather[0].icon}@2x.png" alt={forcast.weather[index].description}>
   <div class="highLow"><span class="temperatureHigh">
   ${Math.round(forcast.main.temp_max)}</span>°/<span class="temperatureLow">${Math.round(forcast.main.temp_min)}</span>°
   </h4>
