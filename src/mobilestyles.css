@@ -41,7 +41,7 @@ padding: 5px 10px;
 
 .celsius-farenheit {position: relative;
 top: 45px;
-left: 240px;
+left: 260px;
 font-size: 14px;}
 
 .col- {white-space: nowrap;
@@ -50,7 +50,7 @@ bottom: 30px;}
 .currenticons {
     position: relative;
     top: 75px;
-    left: 245px;
+    left: 265px;
     color: #a58b98;
     width: 250px;
 
