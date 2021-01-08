@@ -3,7 +3,7 @@ a, a:hover, a:visited { color: #943bd3;
 }
 
 body {
-    margin: 5px 0 0 5px;
+    margin: 5px 0 0 1px;
     background: radial-gradient(circle, rgb(14, 2, 26) 23%, rgb(2, 9, 27) 100%);
     max-height: 890px;
     color: #7e777a;
@@ -41,7 +41,7 @@ padding: 5px 10px;
 
 .celsius-farenheit {position: relative;
 top: 45px;
-left: 208px;
+left: 240px;
 font-size: 14px;}
 
 .col- {white-space: nowrap;
@@ -50,7 +50,7 @@ bottom: 30px;}
 .currenticons {
     position: relative;
     top: 75px;
-    left: 210px;
+    left: 245px;
     color: #a58b98;
     width: 250px;
 
@@ -97,6 +97,7 @@ bottom: 30px;}
                 right: 1px; 
     white-space: nowrap;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+
     .right {float: right;}
 
     .row {position: relative; 
@@ -106,7 +107,7 @@ bottom: 30px;}
         flex-direction: column;
         max-width: 1380px;}
 
-#searchInput {min-width: 220px;
+#searchInput {min-width: 250px;
 position: relative;
 right: 10px;}
 
@@ -115,7 +116,7 @@ right: 10px;}
 
 .submitlocations h4 {
   position: relative;
-  left: 223px;
+  left: 253px;
   bottom: 3px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
