@@ -41,7 +41,7 @@ padding: 5px 10px;
 
 .celsius-farenheit {position: relative;
 top: 45px;
-left: 260px;
+left: 280px;
 font-size: 14px;}
 
 .col- {white-space: nowrap;
@@ -107,7 +107,7 @@ bottom: 30px;}
         flex-direction: column;
         max-width: 1380px;}
 
-#searchInput {min-width: 250px;
+#searchInput {min-width: 280px;
 position: relative;
 right: 10px;}
 
@@ -116,7 +116,7 @@ right: 10px;}
 
 .submitlocations h4 {
   position: relative;
-  left: 253px;
+  left: 283px;
   bottom: 3px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
